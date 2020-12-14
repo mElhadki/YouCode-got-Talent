@@ -8,12 +8,16 @@ public class Config {
     private String url;
     private String username;
     private String password;
+    
+    
     public Config(String url, String username, String password) {
         super();
         this.url = url;
         this.username = username;
         this.password = password;
     }
+    
+    
     public Config() {
     }
     public String getUrl() {
@@ -34,6 +38,7 @@ public class Config {
     public void setPassword(String password) {
         this.password = password;
     }
+    
     public Connection connection() throws SQLException {
         Connection connection = DriverManager.getConnection(this.url,this.username,this.password);
         return connection;

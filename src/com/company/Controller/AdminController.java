@@ -1,4 +1,4 @@
-package com.company.ParticulierController;
+package com.company.Controller;
 
 import com.company.Configs.Config;
 import com.company.models.User;
