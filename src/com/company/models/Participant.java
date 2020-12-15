@@ -19,6 +19,10 @@ public class Participant {
         this.is_accepted = is_accepted;
     }
 
+    public Participant(){
+
+    }
+
     public Long getId_user() {
         return id_user;
     }

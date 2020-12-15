@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16a1f200-dba2-4e7a-bfed-55aef943e3b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/com/company/Controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/com/company/Controller/ParticulierController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/com/company/Controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/com/company/models/Participant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/ParticulierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/models/Participant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/Configs/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/Configs/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/ParticulierController/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/ParticulierController/ParticulierController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/ParticulierController/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/models/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/models/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/models/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/models/Particulier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/company/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Configs/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Configs/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/ParticulierController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/models/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/models/Particulier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/company/Controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/Controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/models/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/models/Participant.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +77,8 @@
       <updated>1607951489639</updated>
       <workItem from="1607951492646" duration="1188000" />
       <workItem from="1607952727822" duration="1762000" />
+      <workItem from="1608042404921" duration="1822000" />
+      <workItem from="1608044273250" duration="817000" />
     </task>
     <servers />
   </component>
@@ -108,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
