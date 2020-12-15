@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16a1f200-dba2-4e7a-bfed-55aef943e3b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bin/com/company/Controller/AdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/com/company/Controller/ParticulierController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/com/company/Controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/com/company/models/Participant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/ParticulierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/models/Participant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/company/Configs/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/Configs/Config.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/company/ParticulierController/AdminController.class" beforeDir="false" />
@@ -12,7 +19,7 @@
       <change beforePath="$PROJECT_DIR$/bin/com/company/models/Particulier.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/company/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/models/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Configs/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Configs/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/ParticulierController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/ParticulierController/UserController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/models/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/models/Admin.java" afterDir="false" />
@@ -89,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607951489639</updated>
       <workItem from="1607951492646" duration="1188000" />
-      <workItem from="1607952727822" duration="1589000" />
+      <workItem from="1607952727822" duration="1762000" />
     </task>
     <servers />
   </component>
