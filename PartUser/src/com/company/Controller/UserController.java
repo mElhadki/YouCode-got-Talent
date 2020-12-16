@@ -50,10 +50,7 @@ public class UserController  {
 		  String regexPhone = "(\\+212|0)([ \\-_/]*)(\\d[ \\-_/]*){9}";
 		  Pattern patternPhone = Pattern.compile(regexPhone);
 		  Matcher matcherPhone= patternPhone.matcher(user.getPhone());
-		  
-		  
-		 
-		  
+		  	
 		
 		  if(user.getId().toString().length() < 5) {
 			  validators.add("the id is too short\n");

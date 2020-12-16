@@ -15,6 +15,7 @@ public class ParticipantController {
 	Scanner scanner;
 	Participant participant;
 	UserController userController;
+	
 	public ParticipantController() {
 		
 		config = new Config("jdbc:mysql://localhost/yc-talents","root","");
@@ -50,7 +51,7 @@ public class ParticipantController {
 			participant.setShow_end_time(Timestamp.valueOf(scanner.next() + " 00:00:00.000000"));
 			System.out.println("please put the file path");
 			participant.setAttached_file(scanner.next());
-			participant.setIs_accepted(0);
+			participant.setIs_accepted(false);
 			  String sqlString = "INSERT into participation (id_user, id_category, description, show_start_time, show_end_time, attached_file, is_accepted)" + " values(?,?,?,?,?,?,?)";
 			  java.sql.PreparedStatement statement = config.connection().prepareStatement(sqlString);
 				statement.setLong(1, participant.getId_user());
@@ -59,7 +60,7 @@ public class ParticipantController {
 				statement.setTimestamp(4, participant.getShow_start_time());
 				statement.setTimestamp(5, participant.getShow_end_time());
 				statement.setString(6, participant.getAttached_file());
-				statement.setInt(7, participant.getIs_accepted());
+				statement.setBoolean(7, participant.getIs_accepted());
 
 				statement.executeUpdate();
 			 

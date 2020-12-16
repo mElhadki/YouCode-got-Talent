@@ -1,6 +1,6 @@
 package com.company.models;
 
-import java.io.File;
+
 import java.sql.Timestamp;
 
 
@@ -11,12 +11,14 @@ public class Participant {
   private Timestamp show_start_time;
   private Timestamp show_end_time;
   private String attached_file;
-  private int is_accepted;
+  private boolean is_accepted;
+  
+  
   public Participant() {
 	  
   }
 public Participant(Long id_user, Long id_category, String description, Timestamp show_start_time,
-		Timestamp show_end_time, String attached_file, int is_accepted) {
+		Timestamp show_end_time, String attached_file, Boolean is_accepted) {
 	super();
 	this.id_user = id_user;
 	this.id_category = id_category;
@@ -62,10 +64,10 @@ public String getAttached_file() {
 public void setAttached_file(String attached_file) {
 	this.attached_file = attached_file;
 }
-public int getIs_accepted() {
+public boolean getIs_accepted() {
 	return is_accepted;
 }
-public void setIs_accepted(int is_accepted) {
+public void setIs_accepted(Boolean is_accepted) {
 	this.is_accepted = is_accepted;
 }
 @Override
