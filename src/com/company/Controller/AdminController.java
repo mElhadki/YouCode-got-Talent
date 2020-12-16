@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class AdminController {
     Config config;
    Scanner scanner = new Scanner(System.in);
-    public AdminController() {
+    public AdminController() throws SQLException {
         config = new Config("jdbc:mysql://localhost/yc-talents", "root", "");
     }
 
@@ -61,24 +61,48 @@ public class AdminController {
         return null;
     }
 
-    public Participant findParticipantByUserEmail(){
+    public Participant findParticipantByUserEmail() {
         System.out.println("Email :");
         String email = scanner.next();
         Participant participant = new Participant();
 
-        try{
-            String query = "SELECT prt.id_user FROM participant prt user us WHERE prt.id_user = us.id_user AND us.email = '"+email+"'";
+        try {
+            String query = "SELECT prt.id_user FROM participant prt user us WHERE prt.id_user = us.id_user AND us.email = '" + email + "'";
             PreparedStatement prestmt = config.connection().prepareStatement(query);
             ResultSet resultSet = prestmt.executeQuery(query);
 
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 System.out.println(resultSet.getString("id_user"));
             }
-        }catch (Exception ex){
+            
+           
+        } catch (Exception ex) {
             ex.getMessage();
         }
 
         return null;
-    }
 
+    }
+    
+    public Participant validateParicipant(int UserId) {
+    	
+        System.out.println("Enter id paricipation :");
+        long user_id = scanner.nextLong();
+        
+    	try {
+    	String query = "UPDATE participation SET is_accepted=TRUE WHERE user_id =?";
+    	PreparedStatement statement = config.connection().prepareStatement(query);
+    	statement.setLong(1, UserId);
+    	 System.out.println("this participation is accepted");
+    	statement.execute();
+    	statement.close();
+    	
+    }catch(Exception e) {
+    	System.out.println("Got an exception !");
+    	System.out.println(e.getMessage());
+    	
+    }
+ 
+    	return null;
+    }
 }

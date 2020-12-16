@@ -11,10 +11,10 @@ public class Main {
     public static void main(String[] args) throws Exception {
 	// write your code here
 
-      UserController userController = new UserController();
-      Scanner scanner = new Scanner(System.in);
+     UserController userController = new UserController();
+     Scanner scanner = new Scanner(System.in);
       
-      boolean var = true;
+     boolean var = true;
       
       while(var) {
     	  /* Depart de l'application
@@ -24,8 +24,9 @@ public class Main {
     	   * --->> la gestion Participant
     	   * */
     	  
-    	  System.out.println("========== Menu de les gestion programmes ============");
-    	  System.out.println("(1) Gestion User");
+    	 System.out.println("========== Menu de les gestion programmes ============");
+    	 System.out.println("(1) Gestion User");
+    	 System.out.println("(2) Connect Admin");
     	  
     	  
     	  int choix = scanner.nextInt();
@@ -35,8 +36,11 @@ public class Main {
     		  boolean variable1 = true;
     		  while(variable1) {
     			  System.out.println("(1) Add User");
-    			  System.out.println("(2) End");
-    			  System.out.println("(2) Choix invalid");
+    			  System.out.println("(2) find User by Id");
+    			  System.out.println("(3) update User");
+    			  System.out.println("(4) create participation the user");
+    			  System.out.println("(5) End");
+    			  System.out.println("(6) Choix invalid");
     			  
     			  
     			  System.out.println("Choix : ");
@@ -45,39 +49,42 @@ public class Main {
     			  
     			  switch(choixUser) {
     			  case 1:
-    				  System.out.println("Add id :");
-    				  long id = scanner.nextLong();
-    				  
-    				  System.out.println("Add first name :");
-    				  String first_name = scanner.next();
-    				  
-    				  System.out.println("Add last name :");
-    				  String last_name = scanner.next();
-    				  
-    				  System.out.println("Add email :");
-    				  String email = scanner.next();
-    				  
-    				  System.out.println("Add phone :");
-    				  String phone = scanner.next();
-    				  
-    				  try {
-    					  userController.addUser(new User(id,first_name, last_name, email, phone));
-    				  }catch(SQLException ex) {
-    					  ex.printStackTrace();
-    				  }
+    				 
     				  
     				  break;
-    				  
-    			  case 2:
+
+    		      case 2:
     				  System.out.println("End");
     				  variable1 = false;
     				  var = true;
     				  break;
-    				  
-    				  default: 
+    			   default:
     					  System.out.println("Choix Invalid !!!!");
     					  break;
-  
+
+    			  }
+    		  }
+    		  break;
+    		  
+    	  case 2:
+    		  boolean variable2 = true;
+    		  while(variable2) {
+    			  System.out.println("(1) Connect Admin");
+    			  System.out.println("(2) find All User");
+    			  System.out.println("(3) find participation");
+    			  System.out.println("(4) find particiapation by user email");
+    			  System.out.println("(5) validate particiapation");
+    			  
+    			  
+    			  System.out.println("Choix :");
+    			  
+    			  int choixAdmin = scanner.nextInt();
+    			  
+    			  switch(choixAdmin) {
+    			  case 1:
+    				  break;
+    				  
+    				  
     			  }
     		  }
     	  }
