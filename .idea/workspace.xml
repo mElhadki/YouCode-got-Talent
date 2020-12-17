@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16a1f200-dba2-4e7a-bfed-55aef943e3b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/company/Controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/Controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Configs/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Configs/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Controller/ParticulierController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/ParticulierController/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/ParticulierController/ParticulierController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/ParticulierController/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Particulier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/models/Participant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/ParticulierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/ParticulierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/models/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/models/Participant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled104.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled104.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SenderTest/SenderTest" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,6 +95,12 @@
       <workItem from="1608106119844" duration="1428000" />
       <workItem from="1608107942216" duration="1300000" />
       <workItem from="1608109757638" duration="1456000" />
+      <workItem from="1608111831524" duration="641000" />
+      <workItem from="1608144523073" duration="673000" />
+      <workItem from="1608158814694" duration="981000" />
+      <workItem from="1608160619146" duration="1302000" />
+      <workItem from="1608198112127" duration="1766000" />
+      <workItem from="1608199934283" duration="2298000" />
     </task>
     <servers />
   </component>
