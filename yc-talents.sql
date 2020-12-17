@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  lun. 14 déc. 2020 à 13:59
--- Version du serveur :  10.1.36-MariaDB
--- Version de PHP :  7.2.11
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 17, 2020 at 03:31 PM
+-- Server version: 5.7.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,134 +18,132 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `yc-talents`
+-- Database: `yc-talents`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admin`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
   `id` bigint(20) NOT NULL,
-  `password` varchar(500) DEFAULT NULL
+  `password` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `password`) VALUES
-(15970010, '456');
+(15970010, 'ayoubgermany@@--@@');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `adminsession`
+-- Table structure for table `adminsession`
 --
 
-CREATE TABLE `adminsession` (
+DROP TABLE IF EXISTS `adminsession`;
+CREATE TABLE IF NOT EXISTS `adminsession` (
   `id` bigint(20) NOT NULL,
   `id_admin` bigint(20) NOT NULL,
-  `is_connected` tinyint(1) NOT NULL
+  `is_connected` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `category`
+-- Table structure for table `category`
 --
 
-CREATE TABLE `category` (
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE IF NOT EXISTS `category` (
   `id` bigint(20) NOT NULL,
-  `name` varchar(500) NOT NULL
+  `name` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'La dance'),
+(2, 'En chantant'),
+(3, 'La scène'),
+(4, 'La Comédie'),
+(5, 'Calcul mental'),
+(6, 'Le cube de Rubik');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `participation`
+-- Table structure for table `participation`
 --
 
-CREATE TABLE `participation` (
+DROP TABLE IF EXISTS `participation`;
+CREATE TABLE IF NOT EXISTS `participation` (
   `id_user` bigint(20) NOT NULL,
   `id_category` bigint(20) NOT NULL,
   `description` varchar(500) NOT NULL,
-  `show-start-time` time NOT NULL,
-  `show-end-time` time NOT NULL,
-  `attached-file` varchar(500) NOT NULL,
-  `is-accepted` tinyint(1) NOT NULL
+  `show_start_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `show_end_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `attached_file` varchar(500) NOT NULL,
+  `is_accepted` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id_user`,`id_category`),
+  KEY `fk_idcategorieP` (`id_category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `participation`
+--
+
+INSERT INTO `participation` (`id_user`, `id_category`, `description`, `show_start_time`, `show_end_time`, `attached_file`, `is_accepted`) VALUES
+(732832, 1, 'test', '2020-12-10 23:00:00', '2020-12-11 23:00:00', 'test', 0),
+(22252222552, 2, 'Desktop/freelancerlogo.jpg', '2020-11-30 23:00:00', '2020-12-03 23:00:00', 'Desktop/freelancerlogo.jpg', 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
   `id` bigint(20) NOT NULL,
   `first_name` varchar(500) NOT NULL,
   `last_name` varchar(500) NOT NULL,
   `email` varchar(500) NOT NULL,
-  `phone` varchar(500) NOT NULL
+  `phone` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `phone`) VALUES
-(15970010, 'Ahmed', 'Mahmoud', 'ahmed.mahmoud.admin@gmail.com', '+212600000000');
+(732832, 'mariem', 'elhadki', 'mariem@gmail.com', '0646274243'),
+(15970010, 'Ahmed', 'Mahmoud', 'ayoubmousa30@gmail.com', '+212600000000'),
+(22252222552, 'ayoub', 'moustahfid', 'botola2015@outlook.com', '0696396672');
 
 --
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `adminsession`
---
-ALTER TABLE `adminsession`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `participation`
---
-ALTER TABLE `participation`
-  ADD PRIMARY KEY (`id_user`,`id_category`),
-  ADD KEY `fk_idcategorieP` (`id_category`);
-
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `admin`
+-- Constraints for table `admin`
 --
 ALTER TABLE `admin`
   ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
 
 --
--- Contraintes pour la table `participation`
+-- Constraints for table `participation`
 --
 ALTER TABLE `participation`
   ADD CONSTRAINT `fk_idcategorieP` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`),
