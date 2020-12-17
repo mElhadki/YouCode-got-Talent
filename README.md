@@ -23,16 +23,27 @@ Utiliser (SMTP) de google (GMAIL) pour envoyer l'email à l'utilisateur
 Les catégories possibles pour participer sont :
 
 La dance
+
 En chantant
+
 La scène
+
 La Comédie
+
 Calcul mental
+
 Le cube de Rubik
+
 L’administrateur par défaut :
 
 Id : 15970010
+
 Prénom : Ahmed
+
 Nom : Mahmoud
+
 Email : ayoubmousa30@gmail.com
+
 mode pass : ayoubgermany@@--@@
+
 Téléphone : +212 6 00 00 00 00
