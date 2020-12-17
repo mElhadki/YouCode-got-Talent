@@ -8,8 +8,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import com.company.Configs.Config;
+import com.company.Enum.Message.Validuser;
 import com.company.models.User;
-
 
 public class UserController  {
 	
@@ -53,27 +53,29 @@ public class UserController  {
 		  	
 		
 		  if(user.getId().toString().length() < 5) {
-			  validators.add("the id is too short\n");
+			  
+			  validators.add(Validuser.IDUSERSHORT.toString());
+			  
 		  }
 		  if(user.getFirst_name().length() < 5) {
-			  validators.add("first name is too short\n");
+			  validators.add(Validuser.FIRSTNAMESHORT.toString());
 
 		  }
 		  if(user.getLast_name().length() < 5) {
-			  validators.add("the last name is too short\n");
+			  validators.add(Validuser.LASTNAMESHORT.toString());
 
 		  }
 		  if(user.getEmail().length() < 10) {
-			  validators.add("the email is too short\n");
+			  validators.add(Validuser.EMAILSHORT.toString());
 		  }
-		  else if(matcherEmail.matches() == false) {
-			  validators.add("email format invalid\n");
+		  if(matcherEmail.matches() == false) {
+			  validators.add(Validuser.EMAILFORMAT.toString());
 		  }
 		  if(user.getPhone().length() < 10) {
-			  validators.add("phone number is too short\n");
+			  validators.add(Validuser.PHONESHORT.toString());
 		  }
-		  else if(matcherPhone.matches() == false) {
-			  validators.add("phone format invalid\n");
+		  if(matcherPhone.matches() == false) {
+			  validators.add(Validuser.PHONEFORMAT.toString());
 		  }
 		  return validators;
 	}
@@ -102,7 +104,7 @@ public class UserController  {
 					statement.setString(5, user.getPhone());
 					statement.executeUpdate();
 				 
-				System.out.println("You are added");
+					System.out.println(Validuser.ADDEDUSER);
 			}
 			  else {
 				  for(int i = 0; i < validator().size(); i++) 
@@ -117,7 +119,7 @@ public class UserController  {
 		  else {
 			  // to not print null in console if id not exist 
 			  if(idCheck(user.getId()) == true) {
-				  System.out.println("the id already exists\n");
+				  System.out.println(Validuser.IDUSERCHECK);
 				  add();
 			  }
 			  
@@ -141,7 +143,8 @@ public class UserController  {
 			  System.out.println("Enter your phone");
 			  user.setPhone(scanner.next());
 			  if(validator().size() == 0) {
-					String sqlString = "UPDATE user"+" SET first_name=?, last_name=?, email=?, phone=?" + "WHERE id=?"; // create the Sql query
+					String sqlString = "UPDATE user"+" SET first_name=?, last_name=?, email=?, phone=?" + "WHERE id=?"; 
+					// create the query
 					 java.sql.PreparedStatement stmt = config.connection().prepareStatement(sqlString);
 					 stmt.setString(1, user.getFirst_name());
 					 stmt.setString(2, user.getLast_name());
@@ -149,7 +152,7 @@ public class UserController  {
 					 stmt.setString(4, user.getPhone());
 					 stmt.setLong(5, user.getId());
 					 stmt.executeUpdate();
-						System.out.println("You are updated user "+user.getFirst_name()+" "+user.getLast_name());
+						System.out.println(Validuser.UPDATEUSER+user.getFirst_name()+" "+user.getLast_name());
 
 			  }
 			  else {
@@ -167,7 +170,7 @@ public class UserController  {
 		  else {
 			  
 			if(idCheck(user.getId()) == false) {
-				System.out.println("the id is not exist in DB");
+				System.out.println(Validuser.IDUSEREXIST);
 				update();
 			}
 			
@@ -183,7 +186,7 @@ public class UserController  {
 			  user.setId(scanner.nextLong());
 			  if(idCheck(user.getId())== false) {
 				  
-				  System.out.println("The id doesn't exist");
+				  System.out.println(Validuser.IDUSEREXIST);
 				  searchById();
 			  }
 			  
@@ -209,5 +212,4 @@ public class UserController  {
 	  
 			  
   }
-		
 }
