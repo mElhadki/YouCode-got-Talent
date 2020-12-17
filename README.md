@@ -20,7 +20,7 @@ Une participation validée = une notification email reçu par le candidat !
 
 Utiliser (SMTP) de google (GMAIL) pour envoyer l'email à l'utilisateur
 
-Les catégories possibles pour participer sont :
+-> Les catégories possibles pour participer sont :
 
 La dance
 
@@ -34,7 +34,9 @@ Calcul mental
 
 Le cube de Rubik
 
-L’administrateur par défaut :
+
+
+-> L’administrateur par défaut :
 
 Id : 15970010
 
